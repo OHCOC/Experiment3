@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void giveTemperature(int* ProvinceA, int* ProvinceB, int* ProvinceC)
+{
+	cout << " Can you please give all the temperature you have gathered for a week of Province A, Province B, and Province C \n \n";
+
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province A, Day " << t << ":";
+		cin >> ProvinceA[t];
+	}
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province B, Day " << t << ":";
+		cin >> ProvinceB[t];
+	}
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province C, Day " << t << ":";
+		cin >> ProvinceC[t];
+	}
+}
+
+void showTemperature(int* ProvinceA, int* ProvinceB, int* ProvinceC)
+{
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province A, Day " << t << "=" << ProvinceA[t] << '\n';
+	}
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province B, Day " << t << "=" << ProvinceB[t] << '\n';
+	}
+	for (int t = 1; t <= 7; ++t)
+	{
+		cout << "Province C, Day " << t << "=" << ProvinceC[t] << '\n';
+	}
+}
+int main() 
+{
+	int ProvinceA[7], ProvinceB[7], ProvinceC[7];
+	giveTemperature(ProvinceA, ProvinceB, ProvinceC);
+	cout << '\n' << "Displaying Values:" << '\n';
+	showTemperature(ProvinceA, ProvinceB, ProvinceC);
+	cin.get();
+	cin.get();
+}
